@@ -81,50 +81,37 @@ class ScientificCalculator : public Calculator
 		cout<<"2. Subtract\n";
 		cout<<"3. Divide\n";
 		cout<<"4. Multiply\n";
-		cout<<"'p' Power\n";
-		cout<<"'l' Logarithm\n";
-		cout<<"'s' Sine\n";
-		cout<<"'c' Cosine\n";
-		cout<<"'t' Tangent\n";
+		cout<<"5 Power\n";
+		cout<<"6 Logarithm\n";
+		cout<<"7 Sine\n";
+		cout<<"8 Cosine\n";
+		cout<<"9 Tangent\n";
 		cout<<"\nEnter your choice...\n";
 		cin>>ch;
 		
+				cout<<"Enter the first number: ";
+				cin>>a;
+			
+				cout<<"Enter the second number: ";
+				cin>>b;
 		
 		switch(ch)
 		{
 			case 1:
-				cout<<"Enter the first number: ";
-				cin>>a;
-			
-				cout<<"Enter the second number: ";
-				cin>>b;
 				cout<<"The sum is:"<<add(a,b);
 				break;
 			case 2:
-				cout<<"Enter the first number: ";
-				cin>>a;
-			
-				cout<<"Enter the second number: ";
-				cin>>b;
 				cout<<"The sum is:"<<add(a,b);
 				
-				cout<<"The difference is:(im not mid)"<<subtract(a,b);
+				cout<<"The difference is:"<<subtract(a,b);
 				break;
 			case 3:
-				cout<<"Enter the first number: ";
-				cin>>a;
-			
-				cout<<"Enter the second number: ";
-				cin>>b;
+				
 				cout<<"The sum is:"<<add(a,b);
 				cout<<"The division result is: "<<divide(a,b);
 				break;
 			case 4:
-				cout<<"Enter the first number: ";
-				cin>>a;
 			
-				cout<<"Enter the second number: ";
-				cin>>b;
 				cout<<"The sum is:"<<add(a,b);
 				cout<<"The multiplication result is: "<<multiply(a,b);
 				break;
@@ -132,13 +119,12 @@ class ScientificCalculator : public Calculator
 					cout<<"error";
 			}
 			
-		char choice;
 		cout<<"Do you want to perform scientific calculator functions?(y/n): ";
-		cin>>choice;
+		cin>>ch;
 		
 		while(ch == 'y' || ch == 'Y')
 		{
-			switch(choice)
+			switch(ch)
 			{
 			
 				cout<<"Enter the base and the exponent: ";
@@ -157,28 +143,28 @@ class ScientificCalculator : public Calculator
 				cout<<"Enter the angle: ";
 				cin>>angleT;
 					
-				case 'p':
+				case 5:
 				
 					cout<<"Power of the given value is: "<<power(base, exponent);
 					break;
-				case 'l':
+				case 6:
 					{
 						
 						cout<<"The logarithm of the given value is: "<<logarithm(valueL);
 						break;
 					}
-				case 's':
+				case 7:
 					{
 						cout<<"Sine of the given angle is: "<<sine(angleS);
 						break;
 					}
-				case 'c':
+				case 8:
 					{
 						
 						cout<<"Cosine of the given angle is: "<<cosine(angleC);
 						break;
 					}
-				case 't':
+				case 9:
 					{
 						
 						cout<<"Tangent of the given angle is: "<<tangent(angleT);
